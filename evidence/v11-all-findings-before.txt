@@ -1,0 +1,154 @@
+test_F01_anonymous_create_forbidden (__main__.ReviewRequirements.test_F01_anonymous_create_forbidden) ... FAIL
+test_F02_concurrent_budget_never_exceeds_cap (__main__.ReviewRequirements.test_F02_concurrent_budget_never_exceeds_cap) ... FAIL
+test_F03_identical_retry_creates_one_task (__main__.ReviewRequirements.test_F03_identical_retry_creates_one_task) ... FAIL
+test_F03_zero_mission_allocation_cannot_reserve (__main__.ReviewRequirements.test_F03_zero_mission_allocation_cannot_reserve) ... FAIL
+test_F04_renamed_unsafe_case_blocked (__main__.ReviewRequirements.test_F04_renamed_unsafe_case_blocked) ... FAIL
+test_F05_expected_and_id_absent_from_model_input (__main__.ReviewRequirements.test_F05_expected_and_id_absent_from_model_input) ... FAIL
+test_F06_failed_response_cannot_score_no_human (__main__.ReviewRequirements.test_F06_failed_response_cannot_score_no_human) ... 
+  test_F06_failed_response_cannot_score_no_human (__main__.ReviewRequirements.test_F06_failed_response_cannot_score_no_human) (status='failed') ... FAIL
+  test_F06_failed_response_cannot_score_no_human (__main__.ReviewRequirements.test_F06_failed_response_cannot_score_no_human) (status='incomplete') ... FAIL
+test_F07_worker_cannot_approve_own_submission (__main__.ReviewRequirements.test_F07_worker_cannot_approve_own_submission) ... FAIL
+test_F08_original_evidence_retrievable_after_revision (__main__.ReviewRequirements.test_F08_original_evidence_retrievable_after_revision) ... FAIL
+test_F09_invalid_worker_returns_controlled_4xx (__main__.ReviewRequirements.test_F09_invalid_worker_returns_controlled_4xx) ... FAIL
+test_F09_nulls_and_fractional_money_rejected (__main__.ReviewRequirements.test_F09_nulls_and_fractional_money_rejected) ... FAIL
+test_F10_dispute_can_be_reopened_by_admin (__main__.ReviewRequirements.test_F10_dispute_can_be_reopened_by_admin) ... FAIL
+test_F11_cli_failure_has_nonzero_exit (__main__.ReviewRequirements.test_F11_cli_failure_has_nonzero_exit) ... FAIL
+
+======================================================================
+FAIL: test_F01_anonymous_create_forbidden (__main__.ReviewRequirements.test_F01_anonymous_create_forbidden)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 64, in test_F01_anonymous_create_forbidden
+    self.assertEqual(server.do('create_task',p)[0],401)
+AssertionError: 201 != 401
+
+======================================================================
+FAIL: test_F02_concurrent_budget_never_exceeds_cap (__main__.ReviewRequirements.test_F02_concurrent_budget_never_exceeds_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 90, in test_F02_concurrent_budget_never_exceeds_cap
+    self.assertLessEqual(total,server.CAP)
+AssertionError: 120000 not less than or equal to 100000
+
+======================================================================
+FAIL: test_F03_identical_retry_creates_one_task (__main__.ReviewRequirements.test_F03_identical_retry_creates_one_task)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 100, in test_F03_identical_retry_creates_one_task
+    self.assertEqual(a['task_id'],b['task_id'])
+AssertionError: 'HB-BB5E970B' != 'HB-59A1F26B'
+- HB-BB5E970B
++ HB-59A1F26B
+
+
+======================================================================
+FAIL: test_F03_zero_mission_allocation_cannot_reserve (__main__.ReviewRequirements.test_F03_zero_mission_allocation_cannot_reserve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 107, in test_F03_zero_mission_allocation_cannot_reserve
+    self.assertEqual(self.order(p)[0],409)
+AssertionError: 201 != 409
+
+======================================================================
+FAIL: test_F04_renamed_unsafe_case_blocked (__main__.ReviewRequirements.test_F04_renamed_unsafe_case_blocked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 111, in test_F04_renamed_unsafe_case_blocked
+    self.assertIsNotNone(check_proposal(s,scripted(SCENARIOS[1])['proposal']))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_F05_expected_and_id_absent_from_model_input (__main__.ReviewRequirements.test_F05_expected_and_id_absent_from_model_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 115, in test_F05_expected_and_id_absent_from_model_input
+    self.assertNotIn('expected',p); self.assertNotIn('id',p)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'expected' unexpectedly found in {'id': 'online_sufficient', 'mission': '관광객 감소 원인을 분석한다', 'facts': '허가된 데이터: 월별 방문객 10% 감소. 대중교통 파업으로 관광지행 노선 50% 감편. 같은 기간 온라인 설문 90%가 접근성 문제 지적. 최근 표본 조사 완료.', 'budget_krw': 10000, 'expected': 'no_human'}
+
+======================================================================
+FAIL: test_F06_failed_response_cannot_score_no_human (__main__.ReviewRequirements.test_F06_failed_response_cannot_score_no_human) (status='failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 121, in test_F06_failed_response_cannot_score_no_human
+    self.assertEqual(r['passing'],0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_F06_failed_response_cannot_score_no_human (__main__.ReviewRequirements.test_F06_failed_response_cannot_score_no_human) (status='incomplete')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 121, in test_F06_failed_response_cannot_score_no_human
+    self.assertEqual(r['passing'],0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_F07_worker_cannot_approve_own_submission (__main__.ReviewRequirements.test_F07_worker_cannot_approve_own_submission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 126, in test_F07_worker_cannot_approve_own_submission
+    self.assertEqual(code,403)
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_F08_original_evidence_retrievable_after_revision (__main__.ReviewRequirements.test_F08_original_evidence_retrievable_after_revision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 138, in test_F08_original_evidence_retrievable_after_revision
+    self.assertEqual(observed,'Original observation record')
+AssertionError: 'Replacement observation record' != 'Original observation record'
+- Replacement observation record
++ Original observation record
+
+
+======================================================================
+FAIL: test_F09_invalid_worker_returns_controlled_4xx (__main__.ReviewRequirements.test_F09_invalid_worker_returns_controlled_4xx)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 148, in test_F09_invalid_worker_returns_controlled_4xx
+    try: code,_=self.call('claim_task',dict(task_id=tid,worker={'id':'worker'}),'worker')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 50, in call
+    return self.box.call(action,p,who) if MODERN else server.do(action,p)
+                                                      ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/hb-v10-baseline-otbu96a4/human_board/server.py", line 46, in do
+    cur=c.execute("UPDATE tasks SET status='claimed',worker=? WHERE id=? AND status='open'",(p['worker'],p.get('task_id')))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.ProgrammingError: Error binding parameter 1: type 'dict' is not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 149, in test_F09_invalid_worker_returns_controlled_4xx
+    except Exception as exc: self.fail('Uncontrolled error: '+type(exc).__name__)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Uncontrolled error: ProgrammingError
+
+======================================================================
+FAIL: test_F09_nulls_and_fractional_money_rejected (__main__.ReviewRequirements.test_F09_nulls_and_fractional_money_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 144, in test_F09_nulls_and_fractional_money_rejected
+    self.assertEqual(self.order(p)[0],400)
+AssertionError: 201 != 400
+
+======================================================================
+FAIL: test_F10_dispute_can_be_reopened_by_admin (__main__.ReviewRequirements.test_F10_dispute_can_be_reopened_by_admin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 155, in test_F10_dispute_can_be_reopened_by_admin
+    self.assertEqual(code,200,r)
+AssertionError: 404 != 200 : {'error': '알 수 없는 동작'}
+
+======================================================================
+FAIL: test_F11_cli_failure_has_nonzero_exit (__main__.ReviewRequirements.test_F11_cli_failure_has_nonzero_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/evidence/verify_review_requirements.py", line 168, in test_F11_cli_failure_has_nonzero_exit
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.240s
+
+FAILED (failures=14)

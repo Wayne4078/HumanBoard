@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Human Board V1.1</title>
+<style>body{font:16px system-ui,sans-serif;background:#f3f5f7;color:#132135;max-width:960px;margin:32px auto;padding:0 16px}section{background:white;border:1px solid #dce2e7;border-radius:12px;padding:20px;margin:16px 0}input,textarea,select{font:inherit;box-sizing:border-box;width:100%;padding:10px;margin:8px 0}textarea{min-height:240px;font-family:monospace}button{font:inherit;padding:10px 16px;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:500px;overflow:auto}small{display:block;color:#526375}</style></head>
+<body><h1>HUMAN BOARD V1.1</h1><p>AI 에이전트가 발주하고 인간이 수행합니다. 로컬 합성 시험용이며 실결제·현장 발주는 실행하지 않습니다.</p>
+<section><h2>인증</h2><label for="token">현재 역할의 접근 토큰</label><input id="token" type="password" autocomplete="off"><small>운영자가 발급한 역할별 토큰을 사용합니다. 토큰은 브라우저 저장소에 보관하지 않습니다. 역할과 기관은 서버가 판정합니다.</small><button id="logout">토큰 지우기</button></section>
+<section><h2>작업 조회</h2><button id="refresh">내 권한으로 게시판 조회</button><pre id="tasks">인증 후 조회하세요.</pre></section>
+<section><h2>권한별 요청</h2><p>승인과 발주는 서로 다른 역할입니다. 검수는 <b>독립 검수자의 수동 증빙 검토</b>이며 AI 검수가 아닙니다. 증빙 조회 후 받은 확인 기록과 항목별 근거가 있어야 승인할 수 있습니다.</p>
+<label for="endpoint">동작</label><select id="endpoint">
+<option value="register_mission">관리자: 임무·예산 등록</option><option value="approve_task">관리자: 특정 초안 승인</option><option value="create_task">AI 발주자: 승인된 초안 게시</option><option value="claim_task">작업자: 수락</option><option value="submit_evidence">작업자: 원문 증빙 제출</option><option value="evidence">검수자: 증빙 원문 조회</option><option value="review_task">검수자: 수동 검수 기록</option><option value="resolve_dispute">관리자: 분쟁 재개·취소</option><option value="cancel_task">관리자: 취소</option></select>
+<label for="payload">요청 JSON (필드와 예시는 README_V1.1.md 참조)</label><textarea id="payload" spellcheck="false">{}</textarea><small>증빙 조회는 task_id와 선택적인 version을 입력합니다. 원문은 JSON으로 반환되며 자동 실행하지 않습니다.</small><button id="send">요청 전송</button><pre id="output" aria-live="polite">아직 실행한 요청이 없습니다.</pre></section>
+<script>
+const $=id=>document.getElementById(id);
+async function api(path,p){const headers={Authorization:'Bearer '+$('token').value,'Content-Type':'application/json'};const r=await fetch('/api/'+path,{method:p===undefined?'GET':'POST',headers,body:p===undefined?undefined:JSON.stringify(p),cache:'no-store'});const result={http_status:r.status,...await r.json()};$('output').textContent=JSON.stringify(result,null,2);return result;}
+$('logout').onclick=()=>{$('token').value='';$('tasks').textContent='토큰을 지웠습니다.';$('output').textContent='';};
+$('refresh').onclick=async()=>{try{const r=await api('tasks');$('tasks').textContent=JSON.stringify(r,null,2);}catch(e){$('output').textContent=String(e);}};
+$('send').onclick=async()=>{try{const p=JSON.parse($('payload').value),action=$('endpoint').value;if(action==='evidence'){const path='tasks/'+encodeURIComponent(p.task_id)+'/evidence'+(p.version===undefined?'':'?version='+encodeURIComponent(p.version));await api(path);}else await api(action,p);}catch(e){$('output').textContent=String(e);}};
+</script></body></html>

@@ -1,0 +1,18 @@
+test_F01_anonymous_create_forbidden (__main__.ReviewRequirements.test_F01_anonymous_create_forbidden) ... ok
+test_F02_concurrent_budget_never_exceeds_cap (__main__.ReviewRequirements.test_F02_concurrent_budget_never_exceeds_cap) ... ok
+test_F03_identical_retry_creates_one_task (__main__.ReviewRequirements.test_F03_identical_retry_creates_one_task) ... ok
+test_F03_zero_mission_allocation_cannot_reserve (__main__.ReviewRequirements.test_F03_zero_mission_allocation_cannot_reserve) ... ok
+test_F04_renamed_unsafe_case_blocked (__main__.ReviewRequirements.test_F04_renamed_unsafe_case_blocked) ... ok
+test_F05_expected_and_id_absent_from_model_input (__main__.ReviewRequirements.test_F05_expected_and_id_absent_from_model_input) ... ok
+test_F06_failed_response_cannot_score_no_human (__main__.ReviewRequirements.test_F06_failed_response_cannot_score_no_human) ... ok
+test_F07_worker_cannot_approve_own_submission (__main__.ReviewRequirements.test_F07_worker_cannot_approve_own_submission) ... ok
+test_F08_original_evidence_retrievable_after_revision (__main__.ReviewRequirements.test_F08_original_evidence_retrievable_after_revision) ... ok
+test_F09_invalid_worker_returns_controlled_4xx (__main__.ReviewRequirements.test_F09_invalid_worker_returns_controlled_4xx) ... ok
+test_F09_nulls_and_fractional_money_rejected (__main__.ReviewRequirements.test_F09_nulls_and_fractional_money_rejected) ... ok
+test_F10_dispute_can_be_reopened_by_admin (__main__.ReviewRequirements.test_F10_dispute_can_be_reopened_by_admin) ... ok
+test_F11_cli_failure_has_nonzero_exit (__main__.ReviewRequirements.test_F11_cli_failure_has_nonzero_exit) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.186s
+
+OK

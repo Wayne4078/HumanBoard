@@ -1,0 +1,26 @@
+test_F11_cli_nonzero_when_all_requests_fail_and_report_preserved (test_v11_security.RuntimeContracts.test_F11_cli_nonzero_when_all_requests_fail_and_report_preserved) ... ok
+test_legacy_database_not_silently_migrated (test_v11_security.RuntimeContracts.test_legacy_database_not_silently_migrated) ... ok
+test_F01_anonymous_all_api_operations_rejected (test_v11_security.Security.test_F01_anonymous_all_api_operations_rejected) ... ok
+test_F01_approval_binds_amount_scope_agent_and_expiry (test_v11_security.Security.test_F01_approval_binds_amount_scope_agent_and_expiry) ... ok
+test_F01_cross_org_read_write_and_audit_isolated (test_v11_security.Security.test_F01_cross_org_read_write_and_audit_isolated) ... ok
+test_F01_revoked_token_and_caller_actor_cannot_override_identity (test_v11_security.Security.test_F01_revoked_token_and_caller_actor_cannot_override_identity) ... ok
+test_F01_worker_impersonation_and_role_separation (test_v11_security.Security.test_F01_worker_impersonation_and_role_separation) ... ok
+test_F02_concurrent_global_reservations_are_atomic (test_v11_security.Security.test_F02_concurrent_global_reservations_are_atomic) ... ok
+test_F03_concurrent_same_key_posts_once (test_v11_security.Security.test_F03_concurrent_same_key_posts_once) ... ok
+test_F03_lock_contention_controlled_retry (test_v11_security.Security.test_F03_lock_contention_controlled_retry) ... ok
+test_F03_mission_limit_independent_of_org_limit (test_v11_security.Security.test_F03_mission_limit_independent_of_org_limit) ... ok
+test_F03_org_and_mission_caps_and_rollback (test_v11_security.Security.test_F03_org_and_mission_caps_and_rollback) ... ok
+test_F04_risky_content_flags_and_unnecessary_missions_fail_closed (test_v11_security.Security.test_F04_risky_content_flags_and_unnecessary_missions_fail_closed) ... ok
+test_F07_evidence_requires_artifact_time_and_location (test_v11_security.Security.test_F07_evidence_requires_artifact_time_and_location) ... ok
+test_F07_no_self_review_no_uninspected_or_unjustified_acceptance (test_v11_security.Security.test_F07_no_self_review_no_uninspected_or_unjustified_acceptance) ... ok
+test_F08_audit_pagination_no_history_truncation (test_v11_security.Security.test_F08_audit_pagination_no_history_truncation) ... ok
+test_F08_versions_preserved_and_stale_or_foreign_inspection_rejected (test_v11_security.Security.test_F08_versions_preserved_and_stale_or_foreign_inspection_rejected) ... ok
+test_F09_malformed_http_is_controlled (test_v11_security.Security.test_F09_malformed_http_is_controlled) ... ok
+test_F09_strict_string_and_integer_types (test_v11_security.Security.test_F09_strict_string_and_integer_types) ... ok
+test_F10_cancel_releases_once_and_retry_never_recreates (test_v11_security.Security.test_F10_cancel_releases_once_and_retry_never_recreates) ... ok
+test_F10_dispute_reopen_resubmit_review_and_cancel (test_v11_security.Security.test_F10_dispute_reopen_resubmit_review_and_cancel) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.746s
+
+OK

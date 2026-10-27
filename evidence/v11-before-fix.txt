@@ -1,0 +1,108 @@
+test_anonymous_audit_is_rejected (test_v11_red_contract.RedContract.test_anonymous_audit_is_rejected) ... FAIL
+test_anonymous_creation_is_rejected (test_v11_red_contract.RedContract.test_anonymous_creation_is_rejected) ... FAIL
+test_anonymous_task_list_is_rejected (test_v11_red_contract.RedContract.test_anonymous_task_list_is_rejected) ... FAIL
+test_empty_completed_output_is_not_valid_no_human (test_v11_red_contract.RedContract.test_empty_completed_output_is_not_valid_no_human) ... FAIL
+test_failed_and_incomplete_responses_never_pass (test_v11_red_contract.RedContract.test_failed_and_incomplete_responses_never_pass) ... 
+  test_failed_and_incomplete_responses_never_pass (test_v11_red_contract.RedContract.test_failed_and_incomplete_responses_never_pass) (state='failed') ... FAIL
+  test_failed_and_incomplete_responses_never_pass (test_v11_red_contract.RedContract.test_failed_and_incomplete_responses_never_pass) (state='incomplete') ... FAIL
+test_model_input_excludes_diagnostic_id (test_v11_red_contract.RedContract.test_model_input_excludes_diagnostic_id) ... FAIL
+test_model_input_excludes_expected (test_v11_red_contract.RedContract.test_model_input_excludes_expected) ... FAIL
+test_refusal_is_not_valid_no_human (test_v11_red_contract.RedContract.test_refusal_is_not_valid_no_human) ... FAIL
+test_renamed_unsafe_scenario_is_blocked (test_v11_red_contract.RedContract.test_renamed_unsafe_scenario_is_blocked) ... FAIL
+test_unknown_function_is_not_valid_no_human (test_v11_red_contract.RedContract.test_unknown_function_is_not_valid_no_human) ... FAIL
+
+======================================================================
+FAIL: test_anonymous_audit_is_rejected (test_v11_red_contract.RedContract.test_anonymous_audit_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 26, in test_anonymous_audit_is_rejected
+    self.assertEqual(server.do('audit',{})[0],401)
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_anonymous_creation_is_rejected (test_v11_red_contract.RedContract.test_anonymous_creation_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 22, in test_anonymous_creation_is_rejected
+    self.assertEqual(server.do('create_task',p)[0],401)
+AssertionError: 201 != 401
+
+======================================================================
+FAIL: test_anonymous_task_list_is_rejected (test_v11_red_contract.RedContract.test_anonymous_task_list_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 24, in test_anonymous_task_list_is_rejected
+    self.assertEqual(server.do('list_tasks',{})[0],401)
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_empty_completed_output_is_not_valid_no_human (test_v11_red_contract.RedContract.test_empty_completed_output_is_not_valid_no_human)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 37, in test_empty_completed_output_is_not_valid_no_human
+    with self.assertRaises(ValueError): parse_response(dict(status='completed',output=[]))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_failed_and_incomplete_responses_never_pass (test_v11_red_contract.RedContract.test_failed_and_incomplete_responses_never_pass) (state='failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 35, in test_failed_and_incomplete_responses_never_pass
+    self.assertEqual(r['passing'],0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_failed_and_incomplete_responses_never_pass (test_v11_red_contract.RedContract.test_failed_and_incomplete_responses_never_pass) (state='incomplete')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 35, in test_failed_and_incomplete_responses_never_pass
+    self.assertEqual(r['passing'],0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_model_input_excludes_diagnostic_id (test_v11_red_contract.RedContract.test_model_input_excludes_diagnostic_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 30, in test_model_input_excludes_diagnostic_id
+    self.assertNotIn('id',json.loads(model_request(SCENARIOS[0],'fake')['input']))
+AssertionError: 'id' unexpectedly found in {'id': 'online_sufficient', 'mission': '관광객 감소 원인을 분석한다', 'facts': '허가된 데이터: 월별 방문객 10% 감소. 대중교통 파업으로 관광지행 노선 50% 감편. 같은 기간 온라인 설문 90%가 접근성 문제 지적. 최근 표본 조사 완료.', 'budget_krw': 10000, 'expected': 'no_human'}
+
+======================================================================
+FAIL: test_model_input_excludes_expected (test_v11_red_contract.RedContract.test_model_input_excludes_expected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 28, in test_model_input_excludes_expected
+    self.assertNotIn('expected',json.loads(model_request(SCENARIOS[0],'fake')['input']))
+AssertionError: 'expected' unexpectedly found in {'id': 'online_sufficient', 'mission': '관광객 감소 원인을 분석한다', 'facts': '허가된 데이터: 월별 방문객 10% 감소. 대중교통 파업으로 관광지행 노선 50% 감편. 같은 기간 온라인 설문 90%가 접근성 문제 지적. 최근 표본 조사 완료.', 'budget_krw': 10000, 'expected': 'no_human'}
+
+======================================================================
+FAIL: test_refusal_is_not_valid_no_human (test_v11_red_contract.RedContract.test_refusal_is_not_valid_no_human)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 42, in test_refusal_is_not_valid_no_human
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_renamed_unsafe_scenario_is_blocked (test_v11_red_contract.RedContract.test_renamed_unsafe_scenario_is_blocked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 46, in test_renamed_unsafe_scenario_is_blocked
+    self.assertIsNotNone(check_proposal(s,scripted(SCENARIOS[1])['proposal']))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_unknown_function_is_not_valid_no_human (test_v11_red_contract.RedContract.test_unknown_function_is_not_valid_no_human)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/human-board-review/human_board/test_v11_red_contract.py", line 39, in test_unknown_function_is_not_valid_no_human
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.006s
+
+FAILED (failures=11)

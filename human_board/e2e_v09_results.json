@@ -1,0 +1,47 @@
+{
+  "version": "0.9",
+  "type": "synthetic local replay",
+  "runs": [
+    {
+      "fixture": "physical_gap",
+      "outcome": "accepted_simulation",
+      "task_id": "HB-843ED69B",
+      "events": [
+        "created",
+        "claimed",
+        "submitted",
+        "review_accepted"
+      ],
+      "mission_feedback": {
+        "mission": "accessibility-review",
+        "observation": "SIMULATED OBSERVATION: 글씨가 작아 안내문을 2m에서 읽기 어려움. 실제 현장 확인 아님.",
+        "ground_truth_confirmed": false,
+        "next_action": "현장 데이터로 간주하지 말고 독립 검증 요청"
+      },
+      "payment": "NOT_PAID",
+      "synthetic": true,
+      "model_tool_selection": "NOT_TESTED"
+    },
+    {
+      "fixture": "online_sufficient",
+      "outcome": "rejected_by_guard",
+      "reason": "unnecessary_fieldwork",
+      "synthetic": true
+    },
+    {
+      "fixture": "no_money",
+      "outcome": "rejected_by_guard",
+      "reason": "budget_violation",
+      "synthetic": true
+    },
+    {
+      "fixture": "high_risk",
+      "outcome": "rejected_by_guard",
+      "reason": "safety_violation",
+      "synthetic": true
+    }
+  ],
+  "no_real_workers": true,
+  "no_model_calls": true,
+  "no_payments": true
+}

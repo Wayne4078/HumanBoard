@@ -1,0 +1,258 @@
+{
+  "original_archive_sha256": "e278d91b1f56bd7b413c8b34ccb4435646086165901a2c24f0a3533105216b13",
+  "archive_file_count": 42,
+  "changed_original_files": [
+    {
+      "path": "human_board/mission_e2e_v09.py",
+      "original_sha256": "2b6cb19cbd5b61a73df150e283ce51cf5f19f82c61622dbbd117a29812b79e21",
+      "v11_sha256": "93980baae7a1a8d2ed2f4e2cc3a84ebcf3c6b4bc55003d9f46086cf442545918"
+    },
+    {
+      "path": "human_board/agent_live_gate_v10.py",
+      "original_sha256": "ea31dcdc064d33810b573d1a24d5264523fd07c32058cfc964eb39599d2cf526",
+      "v11_sha256": "55c52111e939a69735d5918b3f554a1480356f6ada4b3daeb442f896b673112f"
+    },
+    {
+      "path": "human_board/test_agent_live_gate_v10.py",
+      "original_sha256": "3ae201a7c36e453dcfc1e26d47b145b016caba96fffb7f27b184ce462369d17d",
+      "v11_sha256": "c71756ab446686fb2e52d0ab85f293f5839f431b9669fc52e06a55419cfb034f"
+    },
+    {
+      "path": "human_board/test_server.py",
+      "original_sha256": "1324fadd7cb81c5066fae8d1162287e1b8eb53fa0ad795f9e47ec5f6b37ab71e",
+      "v11_sha256": "2c7ec753f561c6959fd9619d2630d4b4737595ba5bc7b494cb7adb5c9bc80b9d"
+    },
+    {
+      "path": "human_board/board.html",
+      "original_sha256": "97309a11aa2f2ca807d947df0a139c020654cf3b8086142795d987c9645d51ae",
+      "v11_sha256": "696d5a9626b21e8db29ed2c39797cfe9d68dc3fac1475906295e09fac4d4853a"
+    },
+    {
+      "path": "human_board/server.py",
+      "original_sha256": "4ed7e7295e40099c5ac36ee60d58bfbeea772743b43138aa4f9b1a08956457cf",
+      "v11_sha256": "98d3002c8610fbf41db12ac0b31792731d330a22353ed0e1015b27e465cd84e2"
+    },
+    {
+      "path": "human_board/agent_customer_v05.py",
+      "original_sha256": "3b35a006d047c034f46ef9f506479912064fdcbc87601227e6275648508a127f",
+      "v11_sha256": "366cfedff03b48e69ec93c2c605ad1fec124469f5180e190abc692c3ab38945c"
+    },
+    {
+      "path": "human_board/mission_bridge.py",
+      "original_sha256": "2a473ed6930f3effbd166983134abfebda9f70198f1fa5d078790a9f92d157dd",
+      "v11_sha256": "3419c5ac625f18a136208617a3f736b2a5773953f6e92000cca3b4e250b1fa65"
+    },
+    {
+      "path": "human_board/test_mission_bridge.py",
+      "original_sha256": "0568cef0d1c4c94b50e77ab5b1d29c6ce83b59598f31e5d95a6c525410ada344",
+      "v11_sha256": "a2947776a69009c66443901338af77f74ada7b11636a5625ade25749200e0110"
+    },
+    {
+      "path": "human_board/agent_trial.py",
+      "original_sha256": "0ff563acb42167c318ae469ee4647f5ab675618eaace2db4a9fef913d6d34bc1",
+      "v11_sha256": "51bb7157977211376d65d8650464fc3c5b4acd253a127db245cc7c91f497e137"
+    },
+    {
+      "path": "human_board/agent_ab_v06.py",
+      "original_sha256": "a5abd1c93016baef184d73dd10a6a53a3d47d92dd7d136cbcb15a208fd0e5fa1",
+      "v11_sha256": "3fe085e0fc42d4e3a7dddd8af2d37e4890ae5ad721555ba73249f8a3281b3796"
+    },
+    {
+      "path": "human_board/agent_tool_v08.py",
+      "original_sha256": "54d57a6f9954f7ae528c3dc275575a4cb413289944c9aac9047adca729abaeb3",
+      "v11_sha256": "9dea64824ca2b5bc756da2c688546e053f8d81a2416b21d6b701b975eb601f1c"
+    }
+  ],
+  "unchanged_original_files": [
+    {
+      "path": "human_board/test_agent_trial.py",
+      "original_sha256": "bc306d75115554e03c1f0d5da7e9298db193230b5cf88ba57b05ed20ecd2818c",
+      "v11_sha256": "bc306d75115554e03c1f0d5da7e9298db193230b5cf88ba57b05ed20ecd2818c"
+    },
+    {
+      "path": "human_board/test_output_v08.txt",
+      "original_sha256": "231a8854d492c95a4a8c7e7215c29bcb319d7146b002223e28de0a54b4501181",
+      "v11_sha256": "231a8854d492c95a4a8c7e7215c29bcb319d7146b002223e28de0a54b4501181"
+    },
+    {
+      "path": "human_board/README_V0.8.md",
+      "original_sha256": "ce8ac61ba61335a019f3cdb846217a798145a6ed0565e026ad59ff276bd8fafb",
+      "v11_sha256": "ce8ac61ba61335a019f3cdb846217a798145a6ed0565e026ad59ff276bd8fafb"
+    },
+    {
+      "path": "human_board/README_V1.0.md",
+      "original_sha256": "54828a379fb8923ea8103dec05d9f487706e1382715cf0e18d6e80dbed216f8f",
+      "v11_sha256": "54828a379fb8923ea8103dec05d9f487706e1382715cf0e18d6e80dbed216f8f"
+    },
+    {
+      "path": "human_board/test_mission_e2e_v09.py",
+      "original_sha256": "0e2f1e4ed9fe2bbb80fc2dfe06b6680e2c8cb6a513b763596062203ef17ff140",
+      "v11_sha256": "0e2f1e4ed9fe2bbb80fc2dfe06b6680e2c8cb6a513b763596062203ef17ff140"
+    },
+    {
+      "path": "human_board/test_agent_customer_v05.py",
+      "original_sha256": "9fec3c3320885077301a1575bfefab606967bef868f5a635ff389e813893470f",
+      "v11_sha256": "9fec3c3320885077301a1575bfefab606967bef868f5a635ff389e813893470f"
+    },
+    {
+      "path": "human_board/e2e_v09_results.json",
+      "original_sha256": "5c20535bd1f4859eecf6921c171013ae1aa803a8e199dedfa2c0194aac25f442",
+      "v11_sha256": "5c20535bd1f4859eecf6921c171013ae1aa803a8e199dedfa2c0194aac25f442"
+    },
+    {
+      "path": "human_board/tool_results_v0.8.json",
+      "original_sha256": "2e7dccb55ea2d4a893ac337296a266440aa68736bc7b92760311ce48facdf99a",
+      "v11_sha256": "2e7dccb55ea2d4a893ac337296a266440aa68736bc7b92760311ce48facdf99a"
+    },
+    {
+      "path": "human_board/test_v10.txt",
+      "original_sha256": "4ef930fa990414e89f7f8d5dddd24b9cf33591eaee7cbffcd5ad5628747f75e5",
+      "v11_sha256": "4ef930fa990414e89f7f8d5dddd24b9cf33591eaee7cbffcd5ad5628747f75e5"
+    },
+    {
+      "path": "human_board/__pycache__/agent_trial.cpython-313.pyc",
+      "original_sha256": "cb894429307ee4b2aa1d6552b8588a8052aed53a21edcf400d1816f0038f94d4",
+      "v11_sha256": "cb894429307ee4b2aa1d6552b8588a8052aed53a21edcf400d1816f0038f94d4"
+    },
+    {
+      "path": "human_board/__pycache__/agent_tool_v08.cpython-313.pyc",
+      "original_sha256": "717631199329dde95b483514a9590be2f82f84274be2cdca985a1f0fbf010993",
+      "v11_sha256": "717631199329dde95b483514a9590be2f82f84274be2cdca985a1f0fbf010993"
+    },
+    {
+      "path": "human_board/__pycache__/agent_ab_v06.cpython-313.pyc",
+      "original_sha256": "82f52638353f307d79f2bf3b917be0683581a04a535363978329cefa9d19212f",
+      "v11_sha256": "82f52638353f307d79f2bf3b917be0683581a04a535363978329cefa9d19212f"
+    },
+    {
+      "path": "human_board/__pycache__/test_agent_trial.cpython-313.pyc",
+      "original_sha256": "10cf88cfa6ab186805bd68d0925a8ff68d0a8ad6612716338d24f4b9da0bea4a",
+      "v11_sha256": "10cf88cfa6ab186805bd68d0925a8ff68d0a8ad6612716338d24f4b9da0bea4a"
+    },
+    {
+      "path": "human_board/__pycache__/test_agent_tool_v08.cpython-313.pyc",
+      "original_sha256": "4e61cb0779ff46d71c674397b53dd9a5df23e7a23304af13da52fe2b8425ce18",
+      "v11_sha256": "4e61cb0779ff46d71c674397b53dd9a5df23e7a23304af13da52fe2b8425ce18"
+    },
+    {
+      "path": "human_board/__pycache__/test_agent_live_gate_v10.cpython-313.pyc",
+      "original_sha256": "4b2b2f5f67bd7b1a0d5ca7c728258668405c862f574aef46807a7950492ca16a",
+      "v11_sha256": "4b2b2f5f67bd7b1a0d5ca7c728258668405c862f574aef46807a7950492ca16a"
+    },
+    {
+      "path": "human_board/__pycache__/server.cpython-313.pyc",
+      "original_sha256": "38ef8fbc917b8672bf28dd867d5580a4cd0a1b08ee67e5c35830522096080672",
+      "v11_sha256": "38ef8fbc917b8672bf28dd867d5580a4cd0a1b08ee67e5c35830522096080672"
+    },
+    {
+      "path": "human_board/__pycache__/test_agent_customer_v05.cpython-313.pyc",
+      "original_sha256": "fa0d0a5a581f3a7e50eb45419bb5c0385205739ed964b598a936ca546c2fac68",
+      "v11_sha256": "fa0d0a5a581f3a7e50eb45419bb5c0385205739ed964b598a936ca546c2fac68"
+    },
+    {
+      "path": "human_board/__pycache__/mission_e2e_v09.cpython-313.pyc",
+      "original_sha256": "0b1250f9c0f4585a7000c1f7b365cecfc2c6d31932d35e9019ae0a0a24bbb992",
+      "v11_sha256": "0b1250f9c0f4585a7000c1f7b365cecfc2c6d31932d35e9019ae0a0a24bbb992"
+    },
+    {
+      "path": "human_board/__pycache__/test_agent_ab_v06.cpython-313.pyc",
+      "original_sha256": "0b7ad28037366dc2a7785aac0e195550b5adc559fe9a9f1b465b9a9f51cea3f1",
+      "v11_sha256": "0b7ad28037366dc2a7785aac0e195550b5adc559fe9a9f1b465b9a9f51cea3f1"
+    },
+    {
+      "path": "human_board/__pycache__/test_mission_e2e_v09.cpython-313.pyc",
+      "original_sha256": "d4a546522b3b2d48e557363ae015700c27a7cd1c6296073261b4e581c99a78cb",
+      "v11_sha256": "d4a546522b3b2d48e557363ae015700c27a7cd1c6296073261b4e581c99a78cb"
+    },
+    {
+      "path": "human_board/__pycache__/test_server.cpython-313.pyc",
+      "original_sha256": "35467590fda947aa61e0cdad3bcfbb78d405a8fb05def12fc4da3c4462624571",
+      "v11_sha256": "35467590fda947aa61e0cdad3bcfbb78d405a8fb05def12fc4da3c4462624571"
+    },
+    {
+      "path": "human_board/__pycache__/test_mission_bridge.cpython-313.pyc",
+      "original_sha256": "5a16a4a89488ed5f44c03331dfbf741f612d2345ef083977e628d896be5ab8a6",
+      "v11_sha256": "5a16a4a89488ed5f44c03331dfbf741f612d2345ef083977e628d896be5ab8a6"
+    },
+    {
+      "path": "human_board/__pycache__/agent_live_gate_v10.cpython-313.pyc",
+      "original_sha256": "ec33304f36482d2f551f4def398ccead7c440ce67eaedeec08bda130be58d2b0",
+      "v11_sha256": "ec33304f36482d2f551f4def398ccead7c440ce67eaedeec08bda130be58d2b0"
+    },
+    {
+      "path": "human_board/__pycache__/mission_bridge.cpython-313.pyc",
+      "original_sha256": "6340205fa34ad081a199c39c449e0291dab096a7df28afc2a662ec10426c7ec7",
+      "v11_sha256": "6340205fa34ad081a199c39c449e0291dab096a7df28afc2a662ec10426c7ec7"
+    },
+    {
+      "path": "human_board/__pycache__/agent_customer_v05.cpython-313.pyc",
+      "original_sha256": "d98cfc862f4b7de4bf782f066ad381f6777f1bc370993d9d1643ff494c0000b7",
+      "v11_sha256": "d98cfc862f4b7de4bf782f066ad381f6777f1bc370993d9d1643ff494c0000b7"
+    },
+    {
+      "path": "human_board/test_agent_ab_v06.py",
+      "original_sha256": "3e257b477b49fb3ea3ffaf6af501b218b43a4fc7e497444cd23dbd6b1750318f",
+      "v11_sha256": "3e257b477b49fb3ea3ffaf6af501b218b43a4fc7e497444cd23dbd6b1750318f"
+    },
+    {
+      "path": "human_board/test_agent_tool_v08.py",
+      "original_sha256": "469ee8f1c3501841d8c83290d2444f10fdb6eaaa4f7e810eeefc192c83254367",
+      "v11_sha256": "469ee8f1c3501841d8c83290d2444f10fdb6eaaa4f7e810eeefc192c83254367"
+    },
+    {
+      "path": "human_board/Human_Board_Showcase_V0.7.html",
+      "original_sha256": "ae80165655bf84653649765f1e6559c2f94b6c64ae6e9ab8e8431105eb181195",
+      "v11_sha256": "ae80165655bf84653649765f1e6559c2f94b6c64ae6e9ab8e8431105eb181195"
+    },
+    {
+      "path": "human_board/readiness_v10.json",
+      "original_sha256": "cb67d2d84a2cccc497e5a32b2737bde06ad8395abdcdce31c4fd6f850b105790",
+      "v11_sha256": "cb67d2d84a2cccc497e5a32b2737bde06ad8395abdcdce31c4fd6f850b105790"
+    },
+    {
+      "path": "human_board/README_V0.9.md",
+      "original_sha256": "96fe1776070ce7965c07bf240b6f784d006291c65b9ee71c7ca74c032dde2a41",
+      "v11_sha256": "96fe1776070ce7965c07bf240b6f784d006291c65b9ee71c7ca74c032dde2a41"
+    }
+  ],
+  "note": "Original archive remains unchanged in attachments. V1.1 source modifications are intentional. __pycache__ and credentials/DB files are excluded from the release archive.",
+  "added_files": [
+    "README.md",
+    "REVIEW_KO.md",
+    "V1.1_ENGINEERING_REPORT.md",
+    "evidence/existing-tests.txt",
+    "evidence/reproduce_findings.py",
+    "evidence/reproduction-output.txt",
+    "evidence/source-integrity.json",
+    "evidence/v10-baseline-tests.txt",
+    "evidence/v10-reproduced.txt",
+    "evidence/v11-ab-baseline.json",
+    "evidence/v11-all-findings-after.txt",
+    "evidence/v11-all-findings-before.txt",
+    "evidence/v11-before-fix.txt",
+    "evidence/v11-customer-baseline.json",
+    "evidence/v11-full-tests.txt",
+    "evidence/v11-interim-full.txt",
+    "evidence/v11-interim-tests.txt",
+    "evidence/v11-model-readiness.json",
+    "evidence/v11-release-tests.txt",
+    "evidence/v11-rule-baseline.json",
+    "evidence/v11-runtime-validation.json",
+    "evidence/v11-scripted-tools.json",
+    "evidence/v11-security-interim.txt",
+    "evidence/validate_runtime.py",
+    "evidence/verify_review_requirements.py",
+    "human_board/.gitignore",
+    "human_board/README_V1.1.md",
+    "human_board/bootstrap.py",
+    "human_board/e2e_v11_results.json",
+    "human_board/model_protocol.py",
+    "human_board/policy.py",
+    "human_board/simulation.py",
+    "human_board/storage.py",
+    "human_board/test_v11_model_protocol.py",
+    "human_board/test_v11_red_contract.py",
+    "human_board/test_v11_security.py",
+    "run_tests.py"
+  ]
+}

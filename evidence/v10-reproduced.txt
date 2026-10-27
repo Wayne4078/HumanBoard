@@ -1,0 +1,31 @@
+test_01_anonymous_can_create_impersonate_and_read_all (__main__.Reproductions.test_01_anonymous_can_create_impersonate_and_read_all) ... ok
+test_02_worker_can_self_accept_meaningless_evidence (__main__.Reproductions.test_02_worker_can_self_accept_meaningless_evidence) ... ok
+test_03_concurrent_creates_exceed_global_cap (__main__.Reproductions.test_03_concurrent_creates_exceed_global_cap) ... ok
+test_04_retry_posts_duplicate_and_reserves_twice (__main__.Reproductions.test_04_retry_posts_duplicate_and_reserves_twice) ... ok
+test_05_no_server_mission_budget_binding (__main__.Reproductions.test_05_no_server_mission_budget_binding) ... ok
+test_06_new_unsafe_case_bypasses_guard_and_server (__main__.Reproductions.test_06_new_unsafe_case_bypasses_guard_and_server) ... ok
+test_07_expected_labels_are_sent_to_model (__main__.Reproductions.test_07_expected_labels_are_sent_to_model) ... ok
+test_08_incomplete_or_failed_model_response_can_score_pass (__main__.Reproductions.test_08_incomplete_or_failed_model_response_can_score_pass) ... ok
+test_09_null_required_fields_and_fractional_budget_are_accepted (__main__.Reproductions.test_09_null_required_fields_and_fractional_budget_are_accepted) ... ok
+test_10_invalid_worker_type_disconnects_http (__main__.Reproductions.test_10_invalid_worker_type_disconnects_http) ... ok
+test_11_original_evidence_lost_after_revision (__main__.Reproductions.test_11_original_evidence_lost_after_revision) ... ok
+test_12_dispute_has_no_recovery_transition (__main__.Reproductions.test_12_dispute_has_no_recovery_transition) ... ok
+test_13_cli_exits_success_when_all_model_requests_fail (__main__.Reproductions.test_13_cli_exits_success_when_all_model_requests_fail) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 6.617s
+
+OK
+E01: anonymous create/worker impersonation/detail/audit access all succeeded
+E02: evidence="x", no reason, same worker/reviewer -> accepted (NO actual payment)
+E03: deterministic interleaving after SUM; approvals= [201, 201] reserved= 120000 cap= 100000
+E04: identical retry/idempotency key -> two tasks, 10000 reserved for 5000 order
+E05: mission=no_money with declared budget_krw=0 -> 20000 task created; no mission ledger
+E06: same high-risk facts, different id -> guard passes; dangerous task also accepted over HTTP
+E07: transport that only reads expected label scores 5 / 5
+E08: status=incomplete/failed with empty output both counted as correct no_human
+E09: null fields persisted as "None"; 1000.99 budget silently converted to 1000
+E10: worker object -> sqlite ProgrammingError -> HTTP disconnect, not controlled 4xx; server stays up
+E11: original evidence overwritten; two audit rows contain no evidence/version/hash
+E12: disputed -> no appeal/review/resubmit transition; reserved budget remains occupied
+E13: all 5 model calls fail (network mocked); CLI exits 0, report passing=0/5

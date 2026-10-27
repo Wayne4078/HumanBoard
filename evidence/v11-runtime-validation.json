@@ -1,0 +1,14 @@
+{
+  "bootstrap": "passed",
+  "credential_permissions": "0600",
+  "duplicate_bootstrap": "rejected_without_overwrite",
+  "anonymous_api": 401,
+  "authenticated_lifecycle": "passed",
+  "review_method": "MANUAL_REVIEW",
+  "subprocess_restart": "passed",
+  "persisted_idempotent_replay": 200,
+  "persisted_committed_krw": 5000,
+  "actual_tasks_dispatched": 0,
+  "external_model_calls": 0,
+  "actual_payments_krw": 0
+}

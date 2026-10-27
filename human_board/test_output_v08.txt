@@ -1,0 +1,29 @@
+test_live_requires_key (test_agent_ab_v06.ABTest.test_live_requires_key) ... ok
+test_no_real_work (test_agent_ab_v06.ABTest.test_no_real_work) ... ok
+test_paired (test_agent_ab_v06.ABTest.test_paired) ... ok
+test_without_tool_never_requests (test_agent_ab_v06.ABTest.test_without_tool_never_requests) ... ok
+test_live_without_key_fails_explicitly (test_agent_customer_v05.CustomerTrialTests.test_live_without_key_fails_explicitly) ... ok
+test_no_auto_publish (test_agent_customer_v05.CustomerTrialTests.test_no_auto_publish) ... ok
+test_offline (test_agent_customer_v05.CustomerTrialTests.test_offline) ... ok
+test_unsafe_field_access_blocked (test_agent_customer_v05.CustomerTrialTests.test_unsafe_field_access_blocked) ... ok
+test_zero_budget_blocked (test_agent_customer_v05.CustomerTrialTests.test_zero_budget_blocked) ... ok
+test_invalid_budget (test_agent_tool_v08.ToolProtocolTests.test_invalid_budget) ... ok
+test_no_risky_work (test_agent_tool_v08.ToolProtocolTests.test_no_risky_work) ... ok
+test_no_unnecessary_work (test_agent_tool_v08.ToolProtocolTests.test_no_unnecessary_work) ... ok
+test_null_input (test_agent_tool_v08.ToolProtocolTests.test_null_input) ... ok
+test_schema (test_agent_tool_v08.ToolProtocolTests.test_schema) ... ok
+test_scripted_cases (test_agent_tool_v08.ToolProtocolTests.test_scripted_cases) ... ok
+test_budget_guard (test_agent_trial.AgentTrialTests.test_budget_guard) ... ok
+test_offline_baseline (test_agent_trial.AgentTrialTests.test_offline_baseline) ... ok
+test_safety_guard (test_agent_trial.AgentTrialTests.test_safety_guard) ... ok
+test_approval_required (test_mission_bridge.MissionBridge.test_approval_required) ... ok
+test_no_budget_and_risk_rejected (test_mission_bridge.MissionBridge.test_no_budget_and_risk_rejected) ... ok
+test_online_does_not_post (test_mission_bridge.MissionBridge.test_online_does_not_post) ... ok
+test_physical_returns_evidence (test_mission_bridge.MissionBridge.test_physical_returns_evidence) ... ok
+test_unreliable_evidence_blocks_resume (test_mission_bridge.MissionBridge.test_unreliable_evidence_blocks_resume) ... ok
+test_full_flow_and_guards (test_server.Flows.test_full_flow_and_guards) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.029s
+
+OK

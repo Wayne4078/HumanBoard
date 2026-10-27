@@ -1,0 +1,48 @@
+{
+  "version": "1.1",
+  "type": "synthetic local replay",
+  "runs": [
+    {
+      "fixture": "physical_gap",
+      "outcome": "accepted_simulation",
+      "task_id": "HB-4D616B695AFD4F929B32B60F9316DFD5",
+      "events": [
+        "created",
+        "claimed",
+        "submitted",
+        "review_accepted"
+      ],
+      "mission_feedback": {
+        "mission": "관광안내 개선안을 검토한다",
+        "observation": "SYNTHETIC 관찰: 출입구 하나가 일시 폐쇄됨; 실제 현장 증빙 아님.",
+        "ground_truth_confirmed": false,
+        "next_action": "현장 데이터로 간주하지 말고 독립 검증 요청"
+      },
+      "review_method": "MANUAL_SYNTHETIC_REVIEW",
+      "payment": "NOT_PAID",
+      "synthetic": true,
+      "model_tool_selection": "NOT_TESTED"
+    },
+    {
+      "fixture": "online_sufficient",
+      "outcome": "rejected_by_guard",
+      "reason": "unnecessary_fieldwork",
+      "synthetic": true
+    },
+    {
+      "fixture": "no_money",
+      "outcome": "rejected_by_guard",
+      "reason": "budget_violation",
+      "synthetic": true
+    },
+    {
+      "fixture": "high_risk",
+      "outcome": "rejected_by_guard",
+      "reason": "safety_violation",
+      "synthetic": true
+    }
+  ],
+  "no_real_workers": true,
+  "no_model_calls": true,
+  "no_payments": true
+}

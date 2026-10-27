@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "e278d91b1f56bd7b413c8b34ccb4435646086165901a2c24f0a3533105216b13",
+  "original_files_checked": 42,
+  "modified_original_files": [],
+  "review_runtime": "Python 3.12.14",
+  "external_model_calls": 0,
+  "real_dispatches": 0,
+  "real_payments": 0
+}

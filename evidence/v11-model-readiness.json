@@ -1,0 +1,5 @@
+{
+  "live_available": false,
+  "key_present_only": false,
+  "note": "Presence of key does not establish API access or successful calls."
+}
