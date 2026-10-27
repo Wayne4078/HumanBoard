@@ -9,6 +9,10 @@
 3. `evidence/v11-full-tests.txt`, `evidence/v11-runtime-validation.json`: 테스트 및 서버 재시작 검증 결과.
 4. 실제 구현: `human_board/server.py`, `storage.py`, `policy.py`, `model_protocol.py`와 관련 테스트.
 
+## 저장소 연결
+
+사용자 요청에 따라 V1.1 소스·증거·보고서를 이 저장소의 `main`에 업로드했습니다. GitHub 앱에 `Wayne4078/HumanBoard` 읽기 권한을 허용한 뒤 이 파일과 보고서를 실제로 조회해 주세요. 저장소 링크만 대화에 붙인 것과 GitHub 앱이 파일 내용을 읽은 것은 구분해야 합니다.
+
 ## 현재 확인된 상태
 
 - 전체 로컬 자동 테스트 84/84 통과.
