@@ -1,0 +1,26 @@
+name: Human Board local regression
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline security and API regression
+        run: python -B run_tests.py
+      - name: Validate local server restart and persistence
+        run: python -B evidence/validate_runtime.py
